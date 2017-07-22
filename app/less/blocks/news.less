@@ -1,0 +1,178 @@
+.news {
+  position: relative;
+  background: @bg-beige;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #e5ddd5;
+  }
+  
+}
+
+.news__inner {
+  .container();
+  padding-top: 33px;
+  padding-bottom: 28px;
+  color: #000;
+}
+
+.news__title {
+  margin: 0;
+  margin-bottom: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.news__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-bottom: 7px;
+}
+
+.news__item {
+  position: relative;
+  padding: 15px 0;
+  padding-bottom: 18px;
+  padding-left: 70px;
+  
+  & p {
+     margin: 0;
+  }
+  
+  & a:hover .news__date {
+    background: @bg-lightbrown;
+    
+    &::before {      
+      border-top: 10px solid @bg-lightbrown;
+    }
+    
+  }
+  
+  & a:active .news__date {
+    background: @bg-darkbrown;
+    
+    &::before {      
+      border-top: 10px solid @bg-darkbrown;
+    }
+  }
+  
+}
+
+.news__item:nth-child(n+2) {  
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: #e5ddd5;
+  }
+  
+}
+
+.news__item:nth-child(n+3) {
+  display: none;  
+}
+
+.news__item--show:nth-child(n+3) {
+  display: block;  
+}
+
+.news__link {
+  text-decoration: none;
+}
+
+.news__date {
+  position: absolute;
+  box-sizing: border-box;
+  top: 12px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 15px;
+  padding-top: 12px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -35px;
+    left: 0;
+    border: 25px solid transparent;
+    border-top: 10px solid #000;
+  }
+  
+}
+
+.news__date b {
+  font-size: 30px;
+  line-height: 16px;
+}
+
+.btn.news__to-all {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.news__to-all--hid {
+  display: none;
+}
+
+@media @tablet-widths {
+  
+  .news {
+    padding-top: 90px;
+    padding-bottom: 28px;
+  }
+  
+  .news__title {
+    min-height: 40px;
+    margin-right: 200px;
+    margin-bottom: 55px;
+  }
+  
+  .news__list {
+    font-size: 0;
+  }
+  
+  .news__item {
+    display: inline-block;
+    width: 220px;
+    margin: 0;
+    padding: 0 30px;
+    padding-left: 70px;
+    vertical-align: top;
+    /*добавить font-size: ;*/
+  }
+  
+}
+
+@media @desktop-widths {
+  
+  .news {
+    padding-top: 88px;
+    padding-bottom: 32px;
+  }
+  
+  .news__title {
+    margin-left: 70px;
+  }
+  
+  .news__item:nth-child(n+3) {
+    display: inline-block;
+  }
+  
+}

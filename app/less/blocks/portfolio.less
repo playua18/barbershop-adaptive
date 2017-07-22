@@ -1,0 +1,338 @@
+/*
+
+
+ {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 34px;
+  padding-top: 30px;
+}
+
+.portfolio__header {
+  margin-bottom: 27px;
+}
+
+.portfolio__slogan {
+  margin: 0;
+
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+@media @mobile-widths-only {
+  .portfolio__header {
+    text-align: center;
+  }
+
+  .btn--home {
+    display: none;
+  }
+}
+
+.portfolio__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+
+
+  border: 1px solid #e5ddd5;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 175px;
+
+    background-color: #e5ddd5;
+
+    z-index: 1;
+  }
+}
+
+.portfolio__month-tag {
+  position: absolute;
+  left: -1px;
+  top: 400px;
+  width: 152px;
+  height: 50px;
+  padding-left: 24px;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #826550;
+
+  z-index: 3;
+}
+
+.portfolio__item--work-of-month {
+  .portfolio__foto {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    height: 479px;
+  }
+}
+
+.portfolio__foto {
+  position: relative;
+  top: -1px;
+  left: -1px;
+  display: block;
+  margin: 0 auto 25px;
+
+  z-index: 2;
+}
+
+.portfolio__item_name {
+  padding-left: 22px;
+  padding-right: 32px;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.portfolio__feedback {
+  margin-bottom: 24px;
+  padding-left: 22px;
+  padding-right: 32px;
+}
+
+.portfolio__service-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 22px;
+
+  list-style: none;
+}
+
+.portfolio__service-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding-left: 46px;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  vertical-align: top;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+
+    background-repeat: no-repeat;
+  }
+}
+
+.portfolio__service-item--cut {
+  padding-left: 36px;
+
+  &::before {
+    width: 21px;
+    height: 20px;
+
+    background-image: url("../img/scissors-icon.svg");
+  }
+}
+
+.portfolio__service-item--beard {
+  margin-right: 35px;
+  padding-left: 44px;
+
+  &::before {
+    width: 23px;
+    height: 21px;
+
+    background-image: url("../img/beard-icon.svg");
+  }
+}
+
+.portfolio__service-item--mustache {
+  padding-left: 45px;
+
+  &::before {
+    left: -13px;
+    top: 6px;
+    width: 45px;
+    height: 12px;
+
+    background-image: url("../img/mustache-icon.svg");
+  }
+}
+
+@media @tablet-widths {
+  .portfolio {
+    .container-fluid();
+
+    padding-bottom: 63px;
+    padding-top: 58px;
+  }
+
+  .portfolio__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 38px;
+  }
+
+  .portfolio__slogan {
+    padding-top: 8px;
+
+    font-size: 40px;
+  }
+
+  .portfolio__item {
+    display: flex;
+    height: 292px;
+    margin-bottom: 41px;
+    padding-bottom: 0;
+
+    &:nth-of-type(2){
+      height: 291px;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .portfolio__month-tag {
+    left: -3px;
+    top: 34px;
+  }
+
+  .portfolio__item--work-of-month {
+    height: 478px;
+
+    .portfolio__desc {
+      padding-right: 40px;
+    }
+  }
+
+  .portfolio__foto {
+    margin: 0;
+    left: -1px;
+
+    vertical-align: top;
+  }
+
+  .portfolio__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 6.5%; /* 50 / 768 ~= 6.5% *//*
+    padding: 0;
+    padding-right: 80px;
+    padding-top: 40px;
+  }
+
+  .portfolio__item_name {
+    padding: 0;
+  }
+
+  .portfolio__feedback {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+
+  .portfolio__service-list {
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+}
+
+@media @desktop-widths {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 79px;
+  }
+
+  .portfolio__header {
+    width: 100%;
+    margin-bottom: 79px;
+  }
+
+  .portfolio__item {
+    flex-direction: column;
+    width: 292px;
+    height: auto;
+    margin: 0;
+
+    &:nth-of-type(2){
+      height: auto;
+    }
+  }
+
+  .portfolio__month-tag {
+    left: auto;
+    right: -1px;
+    top: 30px;
+    padding-right: 18px;
+    padding-left: 0;
+
+    text-align: right;
+  }
+
+  .portfolio__item--work-of-month {
+    flex-direction: row;
+    width: 100%;
+    height: 478px;
+    margin-bottom: 41px;
+
+    .portfolio__foto {
+      margin-bottom: 0;
+
+    }
+
+    .portfolio__desc {
+      margin-left: 4.43%; /* 34 / 768 ~= 4.43% *//*
+      margin-top: 130px;
+      padding: 0;
+    }
+
+    .portfolio__feedback {
+      padding-right: 130px;
+    }
+
+    .portfolio__service-list {
+      position: static;
+    }
+  }
+
+  .portfolio__foto {
+    margin: 0;
+    margin-bottom: 34px;
+  }
+
+  .portfolio__desc {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .portfolio__service-list {
+    margin-bottom: 10px;
+  }
+}
+*/

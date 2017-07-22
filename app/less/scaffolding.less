@@ -1,0 +1,139 @@
+@font-face {
+  font-weight: normal;
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+
+  src: url("../fonts/ptsansnarrow.woff2") format("woff2"),
+  url("../fonts/ptsansnarrow.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+
+  src: url("../fonts/ptsansnarrowbold.woff2") format("woff2"),
+  url("../fonts/ptsansnarrowbold.woff") format("woff");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  background-color: @bg-beige;
+  color: #f7f4f1;
+  font-style: normal;  
+}
+
+*::selection {
+  background: yellow;
+  color: goldenrod;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #000;
+  
+  &:hover {
+    color: @bg-lightbrown;
+  }
+  
+  &:active {
+    color: @bg-darkbrown;
+  }
+  
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 0;
+  outline: none;
+  border: none;
+  background: @bg-lightbrown;
+  color: #fff;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    background: @bg-darkbrown;
+  }
+
+  &:active {
+    color: #978374;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    background: #aeaeae;
+  }
+  
+  &--ghost {
+    padding: 13px 30px;
+    background: #fff;
+    color: #000;
+    box-shadow: inset 0 0 0 1px #e5ddd5;
+  }
+  
+  &--ghost:hover {
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #d5cabe;
+  }
+  
+  &--ghost:active {
+    background: #d5c9bd;
+    color: #958c84;
+    box-shadow: inset 0 0 0 1px #d5c9bd;
+  }
+
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+  
+
+@media @tablet-widths {
+    
+  h2 {
+    font-size: 40px;
+    line-height: 30px;
+  }
+    
+}

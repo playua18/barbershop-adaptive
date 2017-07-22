@@ -1,0 +1,137 @@
+.stats {
+  .container();
+  background: #fff;
+  color: #000;
+}
+
+.stats__header {
+  padding: 26px 38px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.stats__slogan {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.stats__intro {
+  font-size: 20px;
+  line-height: 27px;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.stats__table {
+  width: 100%;
+  color: #fff;
+  background: #404040;
+  border-collapse: collapse;
+}
+
+.stats__table tr {
+  height: 81px;
+}
+
+.stats__table tr:nth-child(3n+1) {
+  background: #404040;
+}
+
+.stats__table tr:nth-child(3n+2) {
+  background: #4e4e4e;
+}
+
+.stats__table tr:nth-child(3n+3) {
+  background: #353535;
+}
+
+.stats__legend {
+  display: block;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  
+  &--top {
+    display: none;
+  }
+  
+  &--bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #666;
+    background: #242424;
+  }
+  
+}
+
+.stats__value {
+  font-size: 40px;
+  padding-left: 22px;
+  font-weight: bold;
+}
+
+.stats__field {
+  padding-right: 21px;
+  text-align: right;
+}
+
+@media @tablet-widths {
+  
+  .stats {
+    position: relative;
+    z-index: 1;
+    margin-top: -184px;
+  }
+  
+  .stats__header {
+    .clearfix();
+    padding: 0;
+    padding-top: 31px;
+    padding-bottom: 24px;
+  }
+
+.stats__slogan {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: none;
+}
+
+.stats__legend--top {
+  display: block;
+  color: #b2b2b2;
+}
+
+.stats__legend--bottom {
+  display: none;
+}
+    
+  .stats__table {
+    .clearfix();
+    display: block;
+  }
+  
+}
+
+@media @desktop-widths {
+  
+  .stats {
+    .clearfix();
+    margin-top: -159px;
+  }
+  
+  .stats__header {
+    float: left;
+    width: 240px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .stats__table {
+    float: left;
+    display: block;
+    width: 640px;
+  }
+  
+}
