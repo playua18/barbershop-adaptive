@@ -10,7 +10,7 @@
 
 .main-nav--closed .main-nav__item:not(.main-nav__item--active),
 .main-nav--closed .main-nav__user-list {
-  display: none; 
+  display: none;
 }
 
 .main-nav__inner a {
@@ -27,23 +27,23 @@
   z-index: 2;
   background: @bg-darkbrown;
   cursor: pointer;
-  
+
   &:hover,
   &:active {
     background: #624530;
   }
-  
+
     &-strips {
     position: relative;
     display: block;
     width: auto;
     height: 20px;
     background: #fff;
-    
+
     &:active {
     background: #917d6f;
     }
-    
+
     &::before,
     &::after {
       content: '';
@@ -53,23 +53,23 @@
       height: 7px;
       background: @bg-darkbrown;
     }
-    
+
     &::before {
       top: 2px;
     }
-    
+
     &::after {
       top: 11px;
     }
-    
+
   }
-  
+
 }
-  
+
 .main-nav__toggle--close {
   height: 50px;
   left: 0;
-    
+
     &::before,
     &::after  {
       content: '';
@@ -81,25 +81,25 @@
       background: #fff;
       border-radius: 5px;
     }
-    
-    &:hover::before, 
+
+    &:hover::before,
     &:hover::after {
       background: #fff;
     }
-    
+
     &:active::before,
     &:active::after {
       background: #917d6f;
     }
-    
+
     &::before {
-      transform: rotate(45deg);  
+      transform: rotate(45deg);
     }
-    
+
     &::after {
       transform: rotate(-45deg);
     }
-    
+
   }
 
 .main-nav__toggle:active .main-nav__toggle-strips {
@@ -108,12 +108,12 @@
 
 .main-nav__toggle:hover .main-nav__toggle-strips,
 .main-nav__toggle:active .main-nav__toggle-strips {
-  
+
   &::before,
   &::after {
     background: #624530;
   }
-  
+
 }
 
 .main-nav__list,
@@ -151,22 +151,22 @@
     inset 0 -1px 0 #71543f;
   text-transform: uppercase;
   overflow: hidden;
-  
+
   &:hover {
     background: #755a46;
   }
-  
+
   &:active {
     background: @bg-darkbrown;
     color: #978374;
     box-shadow: none;
   }
-    
+
 }
 
 .main-nav__list .main-nav__item a,
 .main-nav__user-list .main-nav__user-item a {
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -177,16 +177,16 @@
     box-shadow: inset 4px 0 5px rgba(0,0,0,.3);
     z-index: 100;
   }
-  
+
 }
 
 .main-nav--closed .main-nav__list .main-nav__item a,
 .main-nav--closed .main-nav__user-list .main-nav__user-item a {
-  
+
   &::before {
     display: none;
   }
-  
+
 }
 
 .main-nav__item--active a {
@@ -198,16 +198,16 @@
   text-align: center;
   color: #fff;
   box-shadow: none;
-  
+
   &:hover {
     background: #755a46;
   }
-  
+
   &:active {
     background: @bg-darkbrown;
     color: #978374;
   }
-  
+
 }
 
 .main-nav__user-list {
@@ -218,7 +218,7 @@
 .main-nav__user-list a {
   position: relative;
   padding-left: 49px;
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -227,16 +227,16 @@
     width: 16px;
     height: 16px;
     background: url('../img/sprite.png') no-repeat -10px -204px;
-  } 
-  
+  }
+
   &:hover::after {
     background: url('../img/sprite.png') no-repeat -10px -240px;
-  } 
-  
+  }
+
   &:active::after {
     background: url('../img/sprite.png') no-repeat -10px -204px;
-  } 
-  
+  }
+
 }
 
 .main-nav__user-login {
@@ -248,20 +248,20 @@
   line-height: 24px;
   background: @bg-darkbrown;
   color: #fff;
-  
+
   &:hover {
     background: #624530;
     color: #fff;
   }
-  
+
   &:active {
     color: #917d6f;
   }
-  
+
 }
 
 @media @tablet-widths {
-  
+
   .main-nav {
     width: auto;
     min-height: 70px;
@@ -269,58 +269,58 @@
     color: #fff;
     background: #000;
   }
-  
+
   .main-nav__toggle {
     display: none;
   }
-  
+
   .main-nav__inner {
     margin-top: 50px;
     .container();
     .clearfix();
-    
+
     &::before {
       display: none;
     }
-    
+
   }
-  
+
   .main-nav__list {
     float: left;
     width: 570px;
   }
-  
+
   .main-nav__item {
     display: block;
     float: left;
     vertical-align: top;
   }
-  
+
   .main-nav__item a {
     background: #000;
     min-height: 70px;
     line-height: 70px;
   }
-  
+
   .main-nav__user-list {
     float: right;
     width: 60px;
   }
-  
+
   .main-nav__item--active {
     position: relative;
   }
-  
+
 }
 
 @media @desktop-widths {
-  
+
   .main-nav__list {
     width: 780px;
   }
-  
+
   .main-nav__user-list {
     width: 160px;
   }
-    
+
 }

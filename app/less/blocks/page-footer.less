@@ -1,228 +1,102 @@
-/*
-
-
-.page-footer {
-  background-color: #292929;
+.page-footer__inner {
+  .container();
+  background: #292929;
+  color: #fff;
 }
 
-.page-footer__wrapper {
-  .container-fluid();
-  padding-top: 70px;
-  padding-bottom: 25px;
+p {
+  margin: 0;
+}
+
+.page-footer__btn {
+  display: inline-block;
+  vertical-align:top;
+  border: 1px solid #3e3e3e;
+
+  &:hover {
+    position: relative;
+    z-index: 1;
+    border-color: #545454;
+  }
+
+  &:active {
+    border-color: #252525;
+    background: #252525;
+    color: rgba(255, 255, 255, .3);
+  }
+
 }
 
 .page-footer__contacts {
-  margin: 0 20px;
-  margin-bottom: 26px;
-
+  position: relative;
+  padding: 33px 20px 26px;
   text-align: center;
 
-  b {
-    display: inline-block;
-    margin-bottom: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: #353535;
   }
+}
+
+.page-footer__contacts b {
+  line-height: 40px;
 }
 
 .page-footer__contacts a {
   display: block;
-
-  font-size: 18px;
+  width: auto;
+  height: 50px;
   line-height: 48px;
+  margin-top: 15px;
+  color: #fff;
   text-decoration: none;
-
-  color: #ffffff;
 }
 
-@media @mobile-widths-only {
-  .page-footer {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 32px;
-
-      background-color: @bg-lightgrey;
-      clip-path: polygon(50% 100%, 0 0, 100% 0);
-      -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
-    }
-
-    &--inner-photo {
-      &::before {
-        background-color: #353535;
-      }
-    }
-  }
-
-  .page-footer__contacts a {
-    width: auto;
-    margin-top: 20px;
-
-    font-weight: bold;
-
-    border: 1px solid #3e3e3e;
-
-    cursor: pointer;
-
-    span {
-      position: absolute;
-
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-
-      border: 0;
-
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-    }
-
-    &:hover {
-      border-color: #515151;
-    }
-
-    &:active {
-      color: #676767;
-      border-color: #252525;
-      background-color: #252525;
-    }
-  }
+.page-footer__contacts-hidden {
+  display: none;
 }
+
 
 .page-footer__social {
-  display: block;
-  width: 100%;
-  margin: 0;
-  margin-bottom: 30px;
+
 }
 
 .page-footer__copyright {
-  margin: 0 20px;
-
+  position: relative;
+  padding: 33px 20px 26px;
   text-align: center;
 }
 
 .page-footer__copyright-link {
   display: block;
   width: auto;
-  margin-top: 10px;
-
-  font-weight: bold;
-  font-size: 18px;
+  height: 50px;
   line-height: 48px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
 
-  border: 1px solid #3e3e3e;
-  color: #ffffff;
-  background-color: #292929;
-
-  cursor: pointer;
-
   &:hover {
-    border-color: #515151;
+    color: #fff;
   }
 
-  &:active {
-    color: #676767;
-    border-color: #252525;
-    background-color: #252525;
-  }
 }
+
 
 
 @media @tablet-widths {
-  .page-footer__wrapper {
-    /* position: relative; *//*
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 
-    padding-top: 54px;
-    padding-bottom: 59px;
-  }
-
-  .page-footer__contacts {
-    margin: 0;
-    margin-bottom: 40px;
-    margin-right: 19.5%; /* 150 / 768 ~= 19.5% *//*
-
-    text-align: left;
-
-    b {
-      text-transform: uppercase;
-    }
-
-    a {
-      margin-top: -10px;
-
-      pointer-events: none; /* делаем ссылку некликабельной *//*
-      cursor: default;
-    }
-  }
-
-  .page-footer__social {
-    width: 100%;
-    margin: 0;
-
-    order: 3;
-  }
-
-  .page-footer__copyright {
-    /* position: absolute; *//*
-    /* top: 54px; *//*
-    /* right: 0; *//*
-    width: 160px;
-    margin: 0;
-
-    text-align: center;
-
-    order: 2;
-  }
 }
+
+
 
 @media @desktop-widths {
-  .page-footer__wrapper {
-    flex-wrap: nowrap;
-  }
 
-  .page-footer__contacts {
-    display: inline-block;
-    width: 320px;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-  }
-
-  .page-footer__social {
-    display: inline-block;
-    width: 320px;
-    margin-left: -4px;
-    margin-right: 160px;
-    vertical-align: top;
-
-    order: 2;
-
-    &::before {
-      content: "Давайте дружить!";
-      display: block;
-      width: 100%;
-
-      text-align: center;
-    }
-  }
-
-  .page-footer__copyright {
-    position: static;
-    display: inline-block;
-    width: 160px;
-    margin-left: -4px;
-    vertical-align: top;
-
-    order: 3;
-  }
 }
-*/

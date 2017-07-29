@@ -1,6 +1,10 @@
-.news {
+.news__inner {
+  .container();
   position: relative;
+  box-sizing: border-box;
+  padding: 33px 20px 28px;
   background: @bg-beige;
+  color: #000;
   
   &::after {
     content: '';
@@ -11,14 +15,6 @@
     height: 1px;
     background: #e5ddd5;
   }
-  
-}
-
-.news__inner {
-  .container();
-  padding-top: 33px;
-  padding-bottom: 28px;
-  color: #000;
 }
 
 .news__title {
@@ -123,8 +119,9 @@
 }
 
 .btn.news__to-all {
+  display: block;
+  width: auto;
   box-sizing: border-box;
-  width: 100%;
 }
 
 .news__to-all--hid {
