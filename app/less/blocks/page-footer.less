@@ -1,7 +1,13 @@
+.page-footer {
+  background: #292929;
+}
+
 .page-footer__inner {
   .container();
+  .clearfix();
   background: #292929;
   color: #fff;
+  padding-bottom: 26px;
 }
 
 p {
@@ -43,7 +49,7 @@ p {
   }
 }
 
-.page-footer__contacts b {
+.page-footer__contacts-title {
   line-height: 40px;
 }
 
@@ -61,24 +67,19 @@ p {
   display: none;
 }
 
-
-.page-footer__social {
-
-}
-
 .page-footer__copyright {
   position: relative;
-  padding: 33px 20px 26px;
+  padding: 33px 20px 0;
   text-align: center;
 }
 
 .page-footer__copyright-link {
   display: block;
   width: auto;
-  height: 50px;
-  line-height: 48px;
+  height: 48px;
+  line-height: 46px;
   font-weight: bold;
-  margin-top: 15px;
+  margin-top: 13px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -93,10 +94,80 @@ p {
 
 @media @tablet-widths {
 
+  .page-footer__inner {
+    position: relative;
+    padding-bottom: 59px;
+  }
+
+  .page-footer__contacts {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .page-footer__contacts-title {
+    text-transform: uppercase;
+  }
+
+  .page-footer__contacts .page-footer__btn {
+    border: none;
+    pointer-events: none;
+  }
+
+  .page-footer__contacts-hidden {
+    display: inline;
+  }
+
+  .page-footer__copyright {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .page-footer__copyright-link {
+    width: 160px;
+  }
+
 }
 
 
-
 @media @desktop-widths {
+
+  .page-footer__inner {
+    min-height: 198px;
+    padding-bottom: 0;
+  }
+
+  .page-footer__contacts {
+    float: left;
+    margin-right: 85px;
+    padding: 0;
+    padding-top: 43px;
+  }
+
+  .page-footer__contacts .page-footer__btn {
+    margin-top: 0;
+  }
+
+  .page-footer__social {
+    .clearfix();
+    float: left;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .page-footer__social .visually-hidden {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: auto;
+    min-height: 27px;
+    margin-bottom: 12px;
+  }
+
+  .page-footer__copyright {
+    top: 15px;
+  }
 
 }

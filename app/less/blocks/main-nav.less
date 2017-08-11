@@ -2,7 +2,7 @@
   position: relative;
   width: auto;
   margin: 0 auto;
-  height: 50px;
+  min-height: 50px;
   background: @bg-lightbrown;
   color: #fff;
   z-index: 10;
@@ -11,6 +11,11 @@
 .main-nav--closed .main-nav__item:not(.main-nav__item--active),
 .main-nav--closed .main-nav__user-list {
   display: none;
+}
+
+.main-nav__inner {
+  position: absolute;
+  width: 100%;
 }
 
 .main-nav__inner a {
@@ -189,6 +194,10 @@
 
 }
 
+.main-nav__item--active {
+  pointer-events: none;
+}
+
 .main-nav__item--active a {
   display: block;
   position: absolute;
@@ -263,8 +272,8 @@
 @media @tablet-widths {
 
   .main-nav {
+    .clearfix();
     width: auto;
-    min-height: 70px;
     margin: 0;
     color: #fff;
     background: #000;
@@ -275,9 +284,9 @@
   }
 
   .main-nav__inner {
-    margin-top: 50px;
     .container();
     .clearfix();
+    position: relative;
 
     &::before {
       display: none;
@@ -287,24 +296,89 @@
 
   .main-nav__list {
     float: left;
-    width: 570px;
+    width: auto;
+    background: none;
+    margin: 0;
   }
 
   .main-nav__item {
-    display: block;
     float: left;
     vertical-align: top;
   }
 
   .main-nav__item a {
     background: #000;
-    min-height: 70px;
-    line-height: 70px;
+    line-height: 24px;
+    padding: 24px 16px;
+  }
+
+  .main-nav--closed .main-nav__item:not(.main-nav__item--active), .main-nav--closed .main-nav__user-list {
+    display: block;
+  }
+
+  .main-nav__item--active a {
+    position: relative;
+    left: 0;
+    overflow: visible;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      bottom: -2px;
+      left: 16px;
+      right: 16px;
+      background: @bg-lightbrown;
+    }
   }
 
   .main-nav__user-list {
     float: right;
-    width: 60px;
+    width: 50px;
+    height: 72px;
+    margin: 0;
+
+    & a::after {
+      top: 29px;
+      left: 6px;
+      background-position: -10px -204px;
+    }
+
+    & a:hover::after {
+      background-position: -10px -276px;
+    }
+
+    & a:active::after {
+      background-position: -10px -204px;
+    }
+
+  }
+
+  .main-nav__list .main-nav__item a,
+  .main-nav__user-list .main-nav__user-item a {
+    box-shadow: none;
+
+    &:hover {
+      background: #000;
+      color: @bg-lightbrown;
+    }
+
+    &:active {
+      background: #000;
+      color: #4d4d4d;
+    }
+
+    &::before {
+      box-shadow: none;
+    }
+
+  }
+
+  .main-nav__user-item a {
+    height: 72px;
+    padding: 0;
+    font-size: 0;
+    background: #000;
   }
 
   .main-nav__item--active {
@@ -321,6 +395,56 @@
 
   .main-nav__user-list {
     width: 160px;
+    min-height: 82px;
+
+    & a::after {
+      top: 34px;
+      left: 40px;
+      background-position: -10px -204px;
+    }
+
+    & a:hover::after {
+      background-position: -10px -240px;
+      opacity: .9;
+    }
+
+    & a:active::after {
+      background-position: -10px -240px;
+      opacity: .3;
+    }
+
+  }
+
+  .main-nav .main-nav__item a,
+  .main-nav .main-nav__user-item a {
+    background: #000;
+    color: #fff;
+    padding: 29px 31px;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+    padding: 29px 31px;
+
+    &:active {
+      background: #fff;
+      color: #b2b2b2;
+    }
+
+  }
+
+  .main-nav__user-item a {
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    text-align: right;
+  }
+
+  .main-nav__user-login::before {
+    display: none;
   }
 
 }
