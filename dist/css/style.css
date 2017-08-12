@@ -697,6 +697,10 @@ h3 {
     background: #fff;
     color: #b2b2b2;
   }
+  .main-nav__item--active a::after {
+    left: 31px;
+    right: 31px;
+  }
   .main-nav__user-item a {
     font-weight: bold;
     text-transform: uppercase;
@@ -1265,7 +1269,6 @@ p {
   .reviews__btn {
     position: absolute;
     display: block;
-    outline: none;
     border: none;
     font-size: 0;
     width: 50px;
@@ -1506,16 +1509,12 @@ p {
   }
   .stats__header {
     position: absolute;
+    top: -184px;
+    width: auto;
     height: 129px;
     padding: 0;
     padding-top: 31px;
     padding-bottom: 24px;
-    margin-top: -184px;
-  }
-  .stats__header::after {
-    content: "";
-    display: table;
-    clear: both;
   }
   .stats__header::before {
     content: '';
@@ -1559,6 +1558,8 @@ p {
     display: none;
   }
   .stats__table {
+    width: 320px;
+    margin: 0 auto;
     display: block;
   }
   .stats__table::after {
@@ -1597,6 +1598,16 @@ p {
     display: none;
   }
 }
+@media (min-width: 768px) and (min-width: 768px) {
+  .stats__table {
+    width: 640px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1080px) {
+  .stats__table {
+    width: 960px;
+  }
+}
 @media (min-width: 1080px) {
   .stats__inner {
     margin-top: -160px;
@@ -1609,6 +1620,7 @@ p {
     padding-left: 40px;
     padding-right: 40px;
     margin-top: 0;
+    top: 0;
   }
   .stats__slogan {
     padding: 0;
