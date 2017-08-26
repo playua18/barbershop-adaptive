@@ -1,3 +1,4 @@
+/* Если бы у меня были картинки на retina */
 @font-face {
   font-weight: normal;
   font-family: "PT Sans Narrow";
@@ -329,13 +330,25 @@ h3 {
   color: #fff;
   z-index: 10;
 }
-.main-nav--closed .main-nav__item:not(.main-nav__item--active),
-.main-nav--closed .main-nav__user-list {
-  display: none;
-}
 .main-nav__inner {
   position: absolute;
   width: 100%;
+  overflow: hidden;
+}
+.main-nav__inner::before {
+  content: '';
+  position: absolute;
+  left: 70px;
+  top: -10px;
+  bottom: -10px;
+  width: 100%;
+  -webkit-box-shadow: inset 4px 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 4px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  pointer-events: none;
+}
+.main-nav.main-nav--nojs {
+  overflow: hidden;
 }
 .main-nav__inner a {
   text-decoration: none;
@@ -346,8 +359,9 @@ h3 {
           box-sizing: border-box;
   position: absolute;
   width: 70px;
+  height: 50px;
+  top: 0;
   right: 0;
-  padding: 15px 17px 15px;
   z-index: 2;
   background: #6a4d38;
   cursor: pointer;
@@ -356,73 +370,58 @@ h3 {
 .main-nav__toggle:active {
   background: #624530;
 }
-.main-nav__toggle-strips {
-  position: relative;
-  display: block;
-  width: auto;
-  height: 20px;
-  background: #fff;
-}
-.main-nav__toggle-strips:active {
-  background: #917d6f;
-}
-.main-nav__toggle-strips::before,
-.main-nav__toggle-strips::after {
+.main-nav--closed .main-nav__toggle::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 7px;
-  background: #6a4d38;
-}
-.main-nav__toggle-strips::before {
-  top: 2px;
-}
-.main-nav__toggle-strips::after {
-  top: 11px;
-}
-.main-nav__toggle--close {
-  height: 50px;
-  left: 0;
-}
-.main-nav__toggle--close::before,
-.main-nav__toggle--close::after {
-  content: '';
-  position: absolute;
-  width: 35px;
-  height: 3px;
   left: 17px;
-  bottom: 23px;
+  width: 36px;
+  top: 15px;
+  height: 2px;
   background: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-box-shadow: 0 8px 0 #fff,
+  0 16px 0 #fff;
+          box-shadow: 0 8px 0 #fff,
+  0 16px 0 #fff;
 }
-.main-nav__toggle--close:hover::before,
-.main-nav__toggle--close:hover::after {
-  background: #fff;
-}
-.main-nav__toggle--close:active::before,
-.main-nav__toggle--close:active::after {
+.main-nav--closed .main-nav__toggle:active::after {
   background: #917d6f;
+  -webkit-box-shadow: 0 8px 0 #917d6f,
+    0 16px 0 #917d6f;
+          box-shadow: 0 8px 0 #917d6f,
+    0 16px 0 #917d6f;
 }
-.main-nav__toggle--close::before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: auto;
+  left: 0;
 }
-.main-nav__toggle--close::after {
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 17px;
+  width: 36px;
+  height: 2px;
+  background: #fff;
+}
+.main-nav--opened .main-nav__toggle::before {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.main-nav__toggle:active .main-nav__toggle-strips {
-  background: #917d6f;
+.main-nav--opened .main-nav__toggle::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-.main-nav__toggle:hover .main-nav__toggle-strips::before,
-.main-nav__toggle:active .main-nav__toggle-strips::before,
-.main-nav__toggle:hover .main-nav__toggle-strips::after,
-.main-nav__toggle:active .main-nav__toggle-strips::after {
-  background: #624530;
+.main-nav--opened .main-nav__toggle:active::before,
+.main-nav--opened .main-nav__toggle:active::after {
+  background: #917d6f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .main-nav__list,
 .main-nav__user-list {
@@ -465,18 +464,6 @@ h3 {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.main-nav__list .main-nav__item a::before,
-.main-nav__user-list .main-nav__user-item a::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -10px;
-  bottom: -10px;
-  width: 100%;
-  -webkit-box-shadow: inset 4px 0 5px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 4px 0 5px rgba(0, 0, 0, 0.3);
-  z-index: 100;
-}
 .main-nav--closed .main-nav__list .main-nav__item a::before,
 .main-nav--closed .main-nav__user-list .main-nav__user-item a::before {
   display: none;
@@ -484,7 +471,7 @@ h3 {
 .main-nav__item--active {
   pointer-events: none;
 }
-.main-nav__item--active a {
+.main-nav--closed .main-nav__item--active a {
   display: block;
   position: absolute;
   left: -70px;
@@ -495,10 +482,10 @@ h3 {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.main-nav__item--active a:hover {
+.main-nav--closed .main-nav__item--active a:hover {
   background: #755a46;
 }
-.main-nav__item--active a:active {
+.main-nav--closed .main-nav__item--active a:active {
   background: #6a4d38;
   color: #978374;
 }
@@ -541,6 +528,23 @@ h3 {
 }
 .main-nav__user-login:active {
   color: #917d6f;
+}
+.main-nav--nojs .main-nav__inner {
+  position: static;
+  height: auto;
+}
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__item:not(.main-nav__item--active),
+  .main-nav--closed .main-nav__user-list {
+    display: none;
+  }
+  .main-nav--nojs .main-nav__item:not(.main-nav__item--active),
+  .main-nav--nojs .main-nav__user-list {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
   .main-nav {
@@ -585,10 +589,6 @@ h3 {
     line-height: 24px;
     padding: 24px 16px;
   }
-  .main-nav--closed .main-nav__item:not(.main-nav__item--active),
-  .main-nav--closed .main-nav__user-list {
-    display: block;
-  }
   .main-nav__item--active a {
     position: relative;
     left: 0;
@@ -606,7 +606,6 @@ h3 {
   .main-nav__user-list {
     float: right;
     width: 50px;
-    height: 72px;
     margin: 0;
   }
   .main-nav__user-list a::after {
@@ -665,12 +664,13 @@ h3 {
     width: 780px;
   }
   .main-nav__user-list {
-    width: 160px;
-    min-height: 82px;
+    display: block;
+    width: auto;
+    max-width: 160px;
   }
   .main-nav__user-list a::after {
     top: 34px;
-    left: 40px;
+    left: 15px;
     background-position: -10px -204px;
   }
   .main-nav__user-list a:hover::after {
@@ -701,13 +701,14 @@ h3 {
     left: 31px;
     right: 31px;
   }
-  .main-nav__user-item a {
+  .main-nav .main-nav__user-item a {
     font-weight: bold;
     text-transform: uppercase;
     height: 24px;
     line-height: 24px;
     font-size: 18px;
     text-align: right;
+    padding-left: 47px;
   }
   .main-nav__user-login::before {
     display: none;
@@ -1511,10 +1512,10 @@ p {
     position: absolute;
     top: -184px;
     width: auto;
-    height: 129px;
+    height: 99px;
     padding: 0;
     padding-top: 31px;
-    padding-bottom: 24px;
+    padding-bottom: 54px;
   }
   .stats__header::before {
     content: '';
@@ -1616,7 +1617,7 @@ p {
     position: relative;
     float: left;
     width: 240px;
-    min-height: 265px;
+    min-height: 235px;
     padding-left: 40px;
     padding-right: 40px;
     margin-top: 0;
