@@ -1,0 +1,192 @@
+.price {
+  position: relative;
+  background: #353535;
+  color: #fff;
+  font-size: 20px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 34px;
+    top: -34px;
+    background-color: #353535;
+  }
+
+  &::before {
+    clip-path: polygon(0 0, 0 100%, 50% 100%);
+  }
+
+  &::after {
+    clip-path: polygon(100% 0, 100% 100%, 50% 100%);
+  }
+
+}
+
+.price__inner {
+  .container-fluid();
+  padding: 38px 21px 53px;
+}
+
+.price__title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.price__columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.price__discount {
+  position: relative;
+  display: flex;
+  width: auto;
+  min-height: 55px;
+  margin-top: 26px;
+  padding: 17px;
+  padding-left: 113px;
+  border: 1px solid #484848;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../img/clock-illustration.svg') no-repeat;
+  }
+
+  & p {
+    flex-shrink: 0;
+    margin: auto 0;
+  }
+
+}
+
+@media @mobile-widths-only {
+
+  .price__table {
+    display: block;
+  }
+
+  .price__table tbody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price__table tr {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .price__table td {
+    flex-grow: 1;
+  }
+
+  .price__name {
+    font-weight: bold;
+    max-width: 66%;
+  }
+
+  .price__number {
+    display: none;
+  }
+
+  .price__value {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .price__service {
+    order: 3;
+    width: 100%;
+  }
+
+}
+
+@media @tablet-widths {
+
+  .price__inner {
+    padding: 44px 64px 56px;
+  }
+
+  .price__title {
+    margin-bottom: 53px;
+  }
+
+  .price__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .price__table td {
+    border: 1px solid #484848;
+    border-collapse: collapse;
+    padding: 14px 20px;
+  }
+
+  .price__number {
+    text-align: center;
+  }
+
+  .price__name {
+    font-weight: bold;
+  }
+
+  .price__discount {
+    margin-top: 9px;
+    padding-left: 185px;
+    font-size: 30px;
+    line-height: 55px;
+    font-weight: bold;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .price::before,
+  .price::after {
+    display: none;
+  }
+
+  .price__inner {
+    padding-top: 79px;
+  }
+
+  .price__columns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .price__table {
+    max-width: 65%;
+  }
+
+  .price__discount {
+    width: 167px;
+    padding: 200px 50px 20px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: normal;
+    text-align: center;
+
+    &::before {
+      width: 140px;
+      height: 140px;
+      left: 50%;
+      top: 34px;
+      transform: translateX(-50%);
+      background: url('../img/clock-illustration.svg') no-repeat;
+    }
+
+  }
+
+}

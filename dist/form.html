@@ -10,15 +10,15 @@
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
-    <div class="page-header__logo">
+    <div class="page-header__logopage-header__logo--inner">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 1080px)" srcset="img/logotype-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
         <img width="370" height="153" src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»">
       </picture>
     </div>
     <nav class="main-nav  main-nav--closed  main-nav--nojs">
-      <a class="main-nav__toggle"><span class="main-nav__toggle-strips"></span></a>
+      <a class="main-nav__toggle"></a>
       <div class="main-nav__inner">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
@@ -129,20 +129,38 @@
       <p class="page-footer__contacts">
         <b>Барбершоп «Бородинский»</b><br>
         г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-        <a href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:</span> +7 (812) 555-66-66</a>
+        <a class="page-footer__btn" href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:</span> +7 (812) 555-66-66</a>
       </p>
       <p class="page-footer__social">
+        <span class="visually-hidden">Давайте дружить!</span>
         <span class="social-links">
-          <a class="social-link  social-link--fb" href="">Мы в Фейсбуке</a>
-          <a class="social-link  social-link--in" href="">Мы в Инстаграме</a>
-          <a class="social-link  social-link--vk" href="">Мы в Вконтакте</a>
+          <a class="social-link  social-link--fb  page-footer__btn" href="">Мы в Фейсбуке</a>
+          <a class="social-link  social-link--in  page-footer__btn" href="">Мы в Инстаграме</a>
+          <a class="social-link  social-link--vk  page-footer__btn" href="">Мы в Вконтакте</a>
         </span>
       </p>
       <p class="page-footer__copyright">
         Разработано:
-        <a class="btn  page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy</a>
+        <a class="page-footer__btn  page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy</a>
       </p>
     </div>
   </footer>
+  <div class="modal-content">
+    <h2 class="modal-content__title">Личный кабинет</h2>
+    <p>Введите свой логин и пароль, что бы войти</p>
+    <form class="modal-content__login-form" action="" method="post">
+     <input class="modal-content__field modal-content__field--icon-login"  type="text" name="login" placeholder="Логин">
+     <input class="modal-content__field modal-content__field--icon-password"  type="password" name="password" placeholder="Пароль">
+     <label class="modal-content__checkbox-label"><input class="modal-content__checkbox-input" type="checkbox" name="remember"><span class="modal-content__checkbox-indicator"></span>Запомните меня</label>
+     <a href="" class="modal-content__restore">Я забыл пароль!</a>
+      <button class="modal-content__login btn" type="submit">Войти</button>
+    <button class="modal-content__close btn" type="button" title="Закрыть">Закрыть</button>
+    </form>
+  </div>
+  <div class="modal-overlay"></div>
+  <script src="js/scripts.min.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/mobile-main-nav.js"></script>
+  <script src="js/news.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
-build/
+node_modules/
 .DS_Store
+Thumbs.db
 .idea
 *.ai
 *.log
 *.pdf
 *.psd
 *.sublime*
-node_modules/
-Thumbs.db
+app/

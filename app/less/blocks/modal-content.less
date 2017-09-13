@@ -2,7 +2,7 @@
   position: fixed;
   top: 50px;
   left: 50%;
-  z-index: 32;  
+  z-index: 32;
   display: none;
   box-sizing: border-box;
   margin-left: -160px;
@@ -41,41 +41,41 @@
   line-height: 30px;
   color: #000;
   background: #fff;
-  
+
   &:hover {
     border-color: #d5c9bd;
   }
-  
+
   &:active {
     border-color: #999999;
   }
-  
+
   &::placeholder {
     opacity: 1;
   }
-  
+
   &:placeholder-shown {
     color: #000;
     text-indent: 0;
     transition: color .1s, text-indent .3s;
   }
-  
+
   &:placeholder-shown:focus {
     color: transparent;
     text-indent: 500px;
     transition: color .1s, text-indent .3s;
   }
-  
+
   &--icon-login {
     margin-bottom: 6px;
     background: url('../img/user.svg') no-repeat 94% 50%;
   }
-  
+
   &--icon-password {
     margin-bottom: 26px;
     background: url('../img/locked.svg') no-repeat 94% 50%;
   }
-  
+
 }
 
 .modal-content__checkbox-label {
@@ -135,7 +135,7 @@
 }
 
 .modal-content__checkbox-indicator::before{
-  transform: rotate(45deg);  
+  transform: rotate(45deg);
 }
 
 .modal-content__checkbox-indicator::after{
@@ -159,14 +159,14 @@
 
 
 @media @tablet-widths {
-  
+
   .modal-content {
     top: 130px;
     margin-left: -230px;
     padding: 58px 70px;
     width: 460px;
   }
-  
+
   @keyframes bounce {
     0% {
       transform: translateY(-2000px);
@@ -180,13 +180,13 @@
     100% {
       transform: translateY(0);
     }
-  }  
-  
+  }
+
   .modal-content--show {
     display: block;
     animation: bounce .6s;
   }
-  
+
   @keyframes error {
     0%, 100% {
       transform: translateX(0);
@@ -198,32 +198,32 @@
       transform: translateX(10px);
     }
   }
-  
+
   .modal-content--error {
     animation: error .6s;
   }
-  
+
   .modal-content__field {
     height: 70px;
     padding: 20px 45px 20px 24px;
     font-size: 24px;
-    
+
     &--icon-login {
       margin-bottom: 6px;
       background: url('../img/user.svg') no-repeat 92% 50%;
     }
-    
+
     &--icon-password {
       margin-bottom: 26px;
       background: url('../img/locked.svg') no-repeat 92% 50%;
     }
-    
+
   }
-  
+
   .modal-content__login {
-    width: 100%;    
+    width: 100%;
   }
-  
+
   .modal-content__close,
   .modal-content__close:hover {
     position: absolute;
@@ -238,7 +238,7 @@
     text-indent: 9999px;
     text-overflow: clip;
     cursor: pointer;
-    
+
     &::before,
     &::after {
       content: '';
@@ -249,17 +249,17 @@
       height: 3px;
       background: #fff;
     }
-    
+
     &::before {
-      transform: rotate(45deg);  
+      transform: rotate(45deg);
     }
-    
+
     &::after {
       transform: rotate(-45deg);
     }
-    
+
   }
-  
+
   .modal-content__close:active {
     &::before,
     &::after {
