@@ -10,7 +10,7 @@
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
-    <div class="page-header__logopage-header__logo--inner">
+    <div class="page-header__logo  page-header__logo--inner">
       <picture>
         <source media="(min-width: 1080px)" srcset="img/logotype-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
@@ -24,12 +24,12 @@
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item"><a href="works.html">Наши работы</a></li>
           <li class="main-nav__item  main-nav__item--active"><a>Записаться</a></li>
-          <li class="main-nav__item"><a href="">Контакты</a></li>
-          <li class="main-nav__item"><a href="">HTML Academy</a></li>
+          <li class="main-nav__item"><a href="#">Контакты</a></li>
+          <li class="main-nav__item"><a href="#">HTML Academy</a></li>
         </ul>
         <ul class="main-nav__user-list">
           <li class="main-nav__user-item">
-            <a class="main-nav__user-login" href="" title="Войти">Вход</a>
+            <a class="main-nav__user-login" href="#" title="Войти">Вход</a>
           </li>
         </ul>
       </div>
@@ -37,91 +37,118 @@
   </header>
   <main class="inner-page">
     <section class="order">
-      <header class="order__header">
-        <h2 class="order__title  visually-hidden">Форма записи на стрижку</h2>
-        <b class="order__slogan">Запись на стрижку</b>
-        <a class="btn  btn--home" href="index.html">На главную</a>
-      </header>
-      <form class="order-form">
-        <div class="order-form__contacts">
-          <div class="order-form__name">
-            <input class="order-form__field  order-form__field--name" type="text" name="surname" placeholder="Фамилия">
-            <input class="order-form__field  order-form__field--name" type="text" name="name" placeholder="Имя">
-            <input class="order-form__field  order-form__field--name" type="text" name="patronymic" placeholder="Отчество">
+      <div class="order__inner">
+        <header class="order__header">
+          <h1 class="order__header-title">Запись на стрижку</h1>
+          <a class="btn  btn--ghost" href="index.html">На главную</a>
+        </header>
+        <form class="order__form" action="" method="post">
+          <div class="order__form-contacts">
+            <div class="order__form-name">
+              <input class="order__form-field  order__form-field--name" type="text" name="surname" placeholder="Фамилия">
+              <input class="order__form-field  order__form-field--name" type="text" name="name" placeholder="Имя">
+              <input class="order__form-field  order__form-field--name" type="text" name="patronymic" placeholder="Отчество">
+            </div>
+            <div class="order__form-communications">
+              <input class="order__form-field  order__form-field--communications" type="tel" name="tel" placeholder="Контактный телефон">
+              <input class="order__form-field  order__form-field--communications" type="email" name="email" placeholder="Контактный e-mail">
+            </div>
+            <div class="order__form-information">
+              <textarea class="order__form-field  order__form-field--information" name="info-for-master" placeholder="Доп. информация для мастера" rows="3"></textarea>
+            </div>
           </div>
-          <div class="order-form__communications">
-            <input class="order-form__field  order-form__field--communications" type="tel" name="tel" placeholder="Контактный телефон">
-            <input class="order-form__field  order-form__field--communications" type="email" name="email" placeholder="Контактный e-mail">
+          <div class="order__form-beard-model">
+            <div class="order__form-title-wrapper  order__form-title-wrapper--beard">
+              <h3 class="order__form-title">Выберите модель бороды:</h3>
+            </div>
+            <ul class="order__form-list  order__form-list--model">
+              <li>
+                <label class="order__form-label--model" for="admiral">
+                  <input checked type="radio" name="model" id="admiral">
+                  <span class="order__indicator  order__radio-indicator"></span>
+                  адмирал
+                  <img src="img/beard-1.svg" width="52" height="49" alt="Стиль «Адмирал»">
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--model" for="lumberjack">
+                  <input type="radio" name="model" id="lumberjack">
+                  <span class="order__indicator  order__radio-indicator"></span>
+                  лесоруб
+                  <img src="img/beard-2.svg" width="58" height="68" alt="Стиль «Лесоруб»">
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--model" for="polar-explorer">
+                  <input type="radio" name="model" id="polar-explorer">
+                  <span class="order__indicator  order__radio-indicator"></span>
+                  полярник
+                  <img src="img/beard-3.svg" width="63" height="78" alt="Стиль «Полярник»">
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--model" for="lord">
+                  <input type="radio" name="model" id="lord">
+                  <span class="order__indicator  order__radio-indicator"></span>боярин
+                  <img src="img/beard-4.svg" width="57" height="97" alt="Стиль «Боярин»">
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--model" for="wiseman">
+                  <input type="radio" name="model" id="wiseman">
+                  <span class="order__indicator  order__radio-indicator"></span>мудрец
+                  <img src="img/beard-5.svg" width="45" height="104" alt="Стиль «Мудрец»">
+                </label>
+              </li>
+            </ul>
           </div>
-          <div class="order-form__information">
-            <textarea class="order-form__field  order-form__field--information" name="info-for-master" placeholder="Доп. информация для мастера" rows="5"></textarea>
+          <div class="order__form-additional">
+            <div class="order__form-title-wrapper  order__form-title-wrapper--additional">
+              <h3 class="order__form-title">Дополнительные услуги:</h3>
+            </div>
+            <ul class="order__form-list  order__form-list--additional">
+              <li>
+                <label class="order__form-label--additional" for="color-beard">
+                  <input checked type="checkbox" name="additional" id="color-beard">
+                  <span class="order__indicator  order__checkbox-indicator"></span>Подкрасить бороду
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--additional" for="twirl-mustache">
+                  <input checked type="checkbox" name="additional" id="twirl-mustache" checked>
+                  <span class="order__indicator  order__checkbox-indicator"></span>Накрутить усы
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--additional" for="comb-beard">
+                  <input type="checkbox" name="additional" id="comb-beard">
+                  <span class="order__indicator  order__checkbox-indicator"></span>Причесать бороду
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--additional" for="align-temple">
+                  <input type="checkbox" name="additional" id="align-temple">
+                  <span class="order__indicator  order__checkbox-indicator"></span>Подровнять виски
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--additional" for="remove-graying">
+                  <input type="checkbox" name="additional" id="remove-graying">
+                  <span class="order__indicator  order__checkbox-indicator"></span>Убрать седину
+                </label>
+              </li>
+              <li>
+                <label class="order__form-label--additional" for="polish-bald-spot">
+                  <input type="checkbox" name="additional" id="polish-bald-spot">
+                  <span class="order__indicator  order__checkbox-indicator"></span>
+                  Отполировать лысину
+                </label>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="order-form__beard-model">
-          <div class="order-form__title">
-            <b>Выберите модель бороды:</b>
-          </div>
-          <ul class="order-form__list  order-form__list--model">
-            <li>
-              <input class="order-form__field  order-form__field--model checked" type="radio" name="model" id="admiral">
-              <label class="order-form__label  order-form__label--model" for="admiral">адмирал</label>
-              <img src="" width="52" height="49" alt="Стиль «Адмирал»">
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--model" type="radio" name="model" id="lumberjack">
-              <label class="order-form__label  order-form__label--model" for="lumberjack">лесоруб</label>
-              <img src="" width="58" height="68" alt="Стиль «Лесоруб»">
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--model" type="radio" name="model" id="polar-explorer">
-              <label class="order-form__label  order-form__label--model" for="polar-explorer">полярник</label>
-              <img src="" width="63" height="78" alt="Стиль «Полярник»">
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--model" type="radio" name="model" id="lord">
-              <label class="order-form__label  order-form__label--model" for="lord">боярин</label>
-              <img src="" width="57" height="97" alt="Стиль «Боярин»">
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--model" type="radio" name="model" id="wiseman">
-              <label class="order-form__label  order-form__label--model" for="wiseman">мудрец</label>
-              <img src="" width="45" height="104" alt="Стиль «Мудрец»">
-            </li>
-          </ul>
-        </div>
-        <div class="order-form__additional-service">
-          <div class="order-form__title  order-form__title--additional-service">
-            <b>Дополнительные услуги:</b>
-          </div>
-          <ul class="order-form__list  order-form__list--additional">
-            <li>
-              <input class="order-form__field  order-form__field--additional checked" type="checkbox" name="additional" id="color-beard">
-              <label class="order-form__label  order-form__label--additional" for="color-beard">Подкрасить бороду</label>
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--additional" type="checkbox" name="additional" id="twirl-mustache">
-              <label class="order-form__label  order-form__label--additional" for="twirl-mustache">Накрутить усы</label>
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--additional" type="checkbox" name="additional" id="comb-beard">
-              <label class="order-form__label  order-form__label--additional" for="comb-beard">Причесать бороду</label>
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--additional" type="checkbox" name="additional" id="align-temple">
-              <label class="order-form__label  order-form__label--additional" for="align-temple">Подровнять виски</label>
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--additional" type="checkbox" name="additional" id="remove-graying">
-              <label class="order-form__label  order-form__label--additional" for="remove-graying">Убрать седину</label>
-            </li>
-            <li>
-              <input class="order-form__field  order-form__field--additional" type="checkbox" name="additional" id="polish-bald-spot">
-              <label class="order-form__label  order-form__label--additional" for="polish-bald-spot">Отполировать лысину</label>
-            </li>
-          </ul>
-        </div>
-        <button class="btn order-form__btn" type="submit">Отправить заявку</button>
-      </form>
+          <button class="btn order__form-btn" type="submit">Отправить заявку</button>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
@@ -134,25 +161,25 @@
       <p class="page-footer__social">
         <span class="visually-hidden">Давайте дружить!</span>
         <span class="social-links">
-          <a class="social-link  social-link--fb  page-footer__btn" href="">Мы в Фейсбуке</a>
-          <a class="social-link  social-link--in  page-footer__btn" href="">Мы в Инстаграме</a>
-          <a class="social-link  social-link--vk  page-footer__btn" href="">Мы в Вконтакте</a>
+          <a class="social-link  social-link--fb  page-footer__btn" href="#">Мы в Фейсбуке</a>
+          <a class="social-link  social-link--in  page-footer__btn" href="#">Мы в Инстаграме</a>
+          <a class="social-link  social-link--vk  page-footer__btn" href="#">Мы в Вконтакте</a>
         </span>
       </p>
       <p class="page-footer__copyright">
-        Разработано:
+        Авторы макета:
         <a class="page-footer__btn  page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy</a>
       </p>
     </div>
   </footer>
   <div class="modal-content">
-    <h2 class="modal-content__title">Личный кабинет</h2>
+    <h1 class="modal-content__title">Личный кабинет</h1>
     <p>Введите свой логин и пароль, что бы войти</p>
     <form class="modal-content__login-form" action="" method="post">
      <input class="modal-content__field modal-content__field--icon-login"  type="text" name="login" placeholder="Логин">
      <input class="modal-content__field modal-content__field--icon-password"  type="password" name="password" placeholder="Пароль">
      <label class="modal-content__checkbox-label"><input class="modal-content__checkbox-input" type="checkbox" name="remember"><span class="modal-content__checkbox-indicator"></span>Запомните меня</label>
-     <a href="" class="modal-content__restore">Я забыл пароль!</a>
+     <a href="#" class="modal-content__restore">Я забыл пароль!</a>
       <button class="modal-content__login btn" type="submit">Войти</button>
     <button class="modal-content__close btn" type="button" title="Закрыть">Закрыть</button>
     </form>
