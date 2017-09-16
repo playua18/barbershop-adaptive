@@ -1,11 +1,15 @@
 # Barbershop "Borodinski" adaptive
-Training project from https://htmlacademy.ru/
+
+index.html - https://playua18.github.io/barbershop-adaptive/dist/index.html
+works.html - https://playua18.github.io/barbershop-adaptive/dist/works.html
+form.html - https://playua18.github.io/barbershop-adaptive/dist/form.html
 
 ## Features:  
  * Responsive/Adaptive web design   
  * Semantic HTML   
- * Adaptive images 
+ * Adaptive images
  * Progressive enhancement   
  * Mobile first     
  * BEM
-# test git init git add README.md git commit -m first commit git remote add origin git@github.com:playua18/test.git git push -u origin master
+
+ Project design by https://htmlacademy.ru/
