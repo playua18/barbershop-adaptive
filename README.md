@@ -1,8 +1,8 @@
 # Barbershop "Borodinski" adaptive
 
-index.html - https://playua18.github.io/barbershop-adaptive/dist/index.html
-works.html - https://playua18.github.io/barbershop-adaptive/dist/works.html
-form.html - https://playua18.github.io/barbershop-adaptive/dist/form.html
+ * index.html - https://playua18.github.io/barbershop-adaptive/dist/index.html
+ * works.html - https://playua18.github.io/barbershop-adaptive/dist/works.html
+ * form.html - https://playua18.github.io/barbershop-adaptive/dist/form.html
 
 ## Features:  
  * Responsive/Adaptive web design   
@@ -12,4 +12,4 @@ form.html - https://playua18.github.io/barbershop-adaptive/dist/form.html
  * Mobile first     
  * BEM
 
- Project design by https://htmlacademy.ru/
+ Design project by https://htmlacademy.ru/
