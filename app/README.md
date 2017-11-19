@@ -1,10 +1,15 @@
 # Barbershop "Borodinski" adaptive
-Training project from https://htmlacademy.ru/
 
-## Features:  
- * Responsive/Adaptive web design   
- * Semantic HTML   
+ * index.html - https://playua18.github.io/barbershop-adaptive/dist/index.html
+ * works.html - https://playua18.github.io/barbershop-adaptive/dist/works.html
+ * form.html - https://playua18.github.io/barbershop-adaptive/dist/form.html
+
+## Features:
+ * Responsive/Adaptive web design
+ * Semantic HTML
  * Adaptive images
- * Progressive enhancement   
- * Mobile first     
+ * Progressive enhancement
+ * Mobile first
  * BEM
+
+ Design project by https://htmlacademy.ru/
