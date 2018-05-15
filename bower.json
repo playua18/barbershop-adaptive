@@ -1,0 +1,23 @@
+{
+  "name": "barbershop-adaptive",
+  "description": "My first gulp project",
+  "main": "gulpfile.js",
+  "authors": [
+    "playua18"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/playua18/barbershop-adaptive",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "magnific-popup": "^1.1.0",
+    "bxslider-4": "^4.2.15"
+  }
+}
