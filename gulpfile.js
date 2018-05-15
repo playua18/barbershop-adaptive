@@ -50,7 +50,7 @@ gulp.task('css', ['less'], function () {
 });
 
 gulp.task('css-libs', function () {
-  return gulp.src('src/sass/libs.less') // Выбираем файл
+  return gulp.src('app/less/libs.less') // Выбираем файл
     .pipe(less())
     .pipe(cssnano()) // Сжимаем
     .pipe(rename('libs.min.css')) // Добавляем суффикс .min
