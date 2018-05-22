@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Barbershop Borodinski</title>
-  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
@@ -51,19 +50,19 @@
           <h1 class="order__header-title">Запись на стрижку</h1>
           <a class="btn  btn--ghost" href="/">На главную</a>
         </header>
-        <form class="order__form" action="" method="post">
+        <form id="order__form" method="post">
           <div class="order__form-contacts">
             <div class="order__form-name">
               <input class="order__form-field  order__form-field--name" type="text" name="surname" placeholder="Фамилия">
-              <input class="order__form-field  order__form-field--name" type="text" name="name" placeholder="Имя">
+              <input id="user-name" class="order__form-field  order__form-field--name" type="text" name="name" placeholder="Имя">
               <input class="order__form-field  order__form-field--name" type="text" name="patronymic" placeholder="Отчество">
             </div>
             <div class="order__form-communications">
               <input class="order__form-field  order__form-field--communications" type="tel" name="tel" placeholder="Контактный телефон">
-              <input class="order__form-field  order__form-field--communications" type="email" name="email" placeholder="Контактный e-mail">
+              <input id="user-email" class="order__form-field  order__form-field--communications" type="email" name="email" placeholder="Контактный e-mail">
             </div>
             <div class="order__form-information">
-              <textarea class="order__form-field  order__form-field--information" name="info-for-master" placeholder="Доп. информация для мастера" rows="3"></textarea>
+              <textarea id="user-msg" class="order__form-field  order__form-field--information" name="info-for-master" placeholder="Доп. информация для мастера" rows="3"></textarea>
             </div>
           </div>
           <div class="order__form-beard-model">
@@ -155,6 +154,8 @@
               </li>
             </ul>
           </div>
+          <div id="mail-status"></div>
+          <div id="form-preloader"><img src="/img/form-preloader.gif"></div>
           <button class="btn order__form-btn" type="submit">Отправить заявку</button>
         </form>
       </div>
@@ -193,6 +194,9 @@
     <button class="modal-content__close btn" type="button" title="Закрыть">Закрыть</button>
     </form>
   </div>
+  <div class="modal-overlay"></div>
+  <div class="scroll-top" title="Вверх"><span>&#8673</span></div>
+  <script src="js/libs.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

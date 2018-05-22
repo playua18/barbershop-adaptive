@@ -1,4 +1,4 @@
-jQuery(function($) {
+$(document).ready(function() {
   var mainNav = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
   mainNav.classList.remove('main-nav--nojs');
