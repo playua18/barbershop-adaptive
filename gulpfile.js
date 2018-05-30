@@ -38,8 +38,14 @@ gulp.task('css', function () {
 
 gulp.task('css-libs', function () {
   return gulp.src([
-    'app/libs/normalize.min.css',
-    'app/libs/bxslider-4/dist/jquery.bxslider.min.css'
+    'app/libs/normalize.css/normalize.css',
+    // 'app/libs/jquery-ui/themes/base/all.css',
+    'app/libs/jquery-ui/themes/base/jquery-ui.min.css',
+    'app/libs/jquery-ui/themes/smoothness/jquery-ui.min.css',
+    'app/libs/bxslider-4/dist/jquery.bxslider.min.css',
+    'app/libs/datetimepicker/build/jquery.datetimepicker.min.css',
+    // 'app/libs/bootstrap/dist/css/bootstrap.css',
+    // 'app/libs/jquery-datetime-picker-bygiro/dist/jquery.datetimepicker.ByGiro.min.css'
   ])
     .pipe(concat('libs.min.css'))
     .pipe(csso())
@@ -49,7 +55,8 @@ gulp.task('css-libs', function () {
 gulp.task('js', function () {
   return gulp.src([
     'app/js/*.js',
-    '!app/js/main.min.js',
+    // '!app/js/main.js',
+    '!app/js/scripts.min.js',
     '!app/js/libs.min.js'
   ])
     .pipe(plumber({
@@ -60,8 +67,9 @@ gulp.task('js', function () {
         }
       })
     }))
+    .pipe(concat('scripts.min.js'))
     .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+    // .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({stream: true}));
 });
@@ -69,7 +77,11 @@ gulp.task('js', function () {
 gulp.task('js-libs', function () {
   return gulp.src([
     'app/libs/jquery/dist/jquery.min.js',
-    'app/libs/bxslider-4/dist/jquery.bxslider.min.js'
+    'app/libs/jquery-ui/jquery-ui.min.js',
+    'app/libs/bxslider-4/dist/jquery.bxslider.min.js',
+    'app/libs/datetimepicker/build/jquery.datetimepicker.full.min.js',
+    // 'app/libs/bootstrap/dist/js/bootstrap.js',
+    // 'app/libs/jquery-datetime-picker-bygiro/dist/jquery.datetimepicker.ByGiro.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

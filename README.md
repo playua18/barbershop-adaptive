@@ -1,8 +1,8 @@
 # Barbershop "Borodinski" adaptive
 
- * index.html - https://playua18.github.io/barbershop-adaptive/dist/
- * works.html - https://playua18.github.io/barbershop-adaptive/dist/works.html
- * form.html - https://playua18.github.io/barbershop-adaptive/dist/form.html
+ #### http://borodinski.kl.com.ua/ - главная
+ #### http://borodinski.kl.com.ua/form.html - рабочая форма
+ #### http://borodinski.kl.com.ua/works.html - works
 
 ## Features:  
  * Responsive

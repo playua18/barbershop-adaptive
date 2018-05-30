@@ -1,4 +1,4 @@
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function(){
   var linklogin = document.querySelector('.main-nav__user-login');
   var modallogin = document.querySelector('.modal-content');
   var closelogin = modallogin.querySelector('.modal-content__close');
