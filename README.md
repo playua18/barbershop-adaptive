@@ -1,8 +1,14 @@
 # Barbershop "Borodinski" adaptive
 
- #### http://borodinski.kl.com.ua/ - главная
- #### http://borodinski.kl.com.ua/form.html - рабочая форма
- #### http://borodinski.kl.com.ua/works.html - works
+ #### https://playua20.github.io/Borodinski-responsive/ - home
+ #### https://playua20.github.io/Borodinski-responsive/form.html - order
+ #### https://playua20.github.io/Borodinski-responsive/works.html - works
+ 
+ 
+ > устаревший free домен (2017): 
+ >* http://borodinski.kl.com.ua/ - главная
+ >* http://borodinski.kl.com.ua/form.html - рабочая форма
+ >* http://borodinski.kl.com.ua/works.html - works
 
 ## Features:  
  * Responsive
@@ -15,5 +21,7 @@
  * Flexbox
  * Gulp
  * Less
+ 
+> *Дизайн шаблона принадлежит ***HtmlAcademy****
 
- Design by [Htmlacademy](htmlacademy.ru)
+@ 2017-2023
